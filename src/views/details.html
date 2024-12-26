@@ -1,0 +1,12 @@
+<h2>Playground Details</h2>
+<p>Location: {{playground.location}}</p>
+<h3>Today's Bookings</h3>
+<ul>
+  {{#each bookings}}
+  <li>
+    {{time}} - {{description}}
+    <button hx-post="/bookings/{{id}}/join" hx-target="this">Join</button>
+  </li>
+  {{/each}}
+</ul>
+<a href="/create-booking" hx-get="/create-booking" hx-target="#app">Create Booking</a>

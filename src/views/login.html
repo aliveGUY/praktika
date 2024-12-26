@@ -1,0 +1,11 @@
+<h2>Login</h2>
+<form hx-post="/login" hx-target="#app">
+  <label for="name">Username:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required />
+
+  <button type="submit">Login</button>
+</form>
+<a href="/register" hx-get="/users/register" hx-target="#app" hx-push-url="true">Register</a>

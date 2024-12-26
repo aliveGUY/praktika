@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Playground App</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/login" hx-get="/users/login" hx-target="#app">Login</a>
+        <a href="/profile" hx-get="/users/profile" hx-target="#app">Profile</a>
+      </nav>
+    </header>
+    <main id="app">
+      <h2>Playgrounds</h2>
+      <ul hx-get="/api/playgrounds" hx-trigger="load" hx-swap="innerHTML" style="height: 100px;">
+      </ul>
+    </main>
+  </body>
+</html>
